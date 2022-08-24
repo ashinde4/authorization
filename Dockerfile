@@ -1,4 +1,4 @@
-FROM openjdk:8
-LABEL maintainer="kapilbodhare"
-ADD target/authorization-0.0.1-SNAPSHOT.jar authorization-service.jar
-ENTRYPOINT ["java", "-jar", "authorization-service.jar"]
+FROM openjdk:17
+EXPOSE 9095
+ADD target/authorization-service.jar authorization-service.jar
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar authorization-service.jar"]
