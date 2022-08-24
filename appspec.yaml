@@ -5,6 +5,6 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:us-west-2:860061945305:task-definition/authorization-service:2"
         LoadBalancerInfo:
-          ContainerName: "auth"
+          ContainerName: "authorization-service"
           ContainerPort: "9095"
         PlatformVersion: "LATEST"
